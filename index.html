@@ -52,7 +52,10 @@
             imgon[currentImage].style.opacity = 1;
             imgon[currentImage].style.transform = "scale(1.5)";
             for (var i = 0; i < imgon.length; i++) {
-                if (i >= currentImage - 1 && i <= currentImage + 1) {
+                if(i == 0){
+                    imgon[i].style.display = "block";
+                }
+                else if (i !== 0 && i >= currentImage - 1 && i <= currentImage + 1) {
                     imgon[i].style.display = "block";
                 } else if(imgon[0]!==currentImage){
                     imgon[i].style.display = "none";
